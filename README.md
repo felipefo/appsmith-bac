@@ -47,6 +47,7 @@ npx jest
 
 
 '''
+
 export default {
 	async getData () {
 		var data;
