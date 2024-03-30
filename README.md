@@ -1,8 +1,3 @@
-<p align="center">
-<a href="https://www.appsmith.com?utm_source=github&utm_medium=organic&utm_campaign=readme">
-  <img src="static/appsmith_logo_white.png" alt="Appsmith Logo" width="350">
-</a>
-</p>
 
 # BAC Custom Library
 
@@ -15,7 +10,7 @@ This is a collection of utility functions for common tasks in JavaScript. This m
 You can clone this repo using Git to create and modify:
 
 ```sh
-git clone git@[github.com:felipefo/appsmith-bac.git
+git clone git@github.com:felipefo/appsmith-bac.git
 ```
 Once cloned, you will need to install the Node modules to get it ready for usage. This should only be needed the first time (unless you add extra modules).
 ```sh
