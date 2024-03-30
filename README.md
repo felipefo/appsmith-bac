@@ -58,7 +58,7 @@ npm run readme.generate
 npm run umd.generate
 ```
 
-### Teste
+### Para rodar os Teste
 
 npx jest
 
