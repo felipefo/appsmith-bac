@@ -46,8 +46,8 @@ npx jest
 3. Para usar o exemplo dentro do appsmith crie um objeto JSObject 
 
 
-'''
 
+'''
 export default {
 	async getData () {
 		var data;
@@ -62,7 +62,6 @@ export default {
 		return data;
 	}
 }
-
 '''
 
 
