@@ -64,8 +64,7 @@ https://cdn.jsdelivr.net/gh/appsmithorg/foundry@main/dist/svgTags.umd.js
 -----
 ### svgTags.selectOptions(data,label,value)
 
-@method selectOptions Generates array of {label, value} objects sorted by label & with unique values, for use in Select or List widgets. 
- Supports nested paths, and filters out options where the label or value are null or undefined.
+@method selectOptions Generates array of {label, value} objects sorted by label & with unique values, for use in Select or List widgets.  Supports nested paths, and filters out options where the label or value are null or undefined.
 
 - *parameters*
   - `data`: An array of objects, from your API or Query response. 
@@ -81,8 +80,7 @@ https://cdn.jsdelivr.net/gh/appsmithorg/foundry@main/dist/svgTags.umd.js
 -----
 ### svgTags.objToRows(obj)
 
-@method objToRows Converts a single object to an array of {property, value} objects, 
- for viewing a single row vertically in Select or List widgets.
+@method objToRows Converts a single object to an array of {property, value} objects,  for viewing a single row vertically in Select or List widgets.
 
 - *parameters*
   - `obj`: A single row of data from an API, Query, or selected table/list row. 
