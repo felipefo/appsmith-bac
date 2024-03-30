@@ -1,11 +1,11 @@
+// code-runner
 
-export default {
+
+export default{
 
  sum(a, b) {
   return a + b;
 },
-
-
 
 teste(){
 	
@@ -45,6 +45,7 @@ teste(){
 	  //showAlert(error);
 	  throw new Error(error);
   }
+  console.log(dados);
 	return dados; 
 }
 
@@ -52,3 +53,4 @@ teste(){
 // Exporte a função toUpperCase para ser utilizada em outros arquivos
 
 };
+
