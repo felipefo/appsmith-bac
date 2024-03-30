@@ -4,7 +4,7 @@
 </a>
 </p>
 
-# Appsmith Foundry Custom Library
+# BAC Custom Library
 
 This is a collection of utility functions for common tasks in JavaScript. This module includes functions to work with arrays, objects, and generate unique IDs. It's designed to be simple to use and can be easily integrated into your Node.js, browser-based projects or Appsmith apps.
 
