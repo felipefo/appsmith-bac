@@ -64,10 +64,4 @@ export default {
 '''
 
 
-## Contributing
-
-Contributions are always welcome! Open an issue or a PR!
-
-## License
-
 [MIT](https://choosealicense.com/licenses/mit/)
