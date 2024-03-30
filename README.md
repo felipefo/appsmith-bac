@@ -54,27 +54,6 @@ npm run umd.generate
 
 Here are the libraries available in this repo and how to use them. All of them are availble using JSDelivr so you can import them into your Appsmith app.
 
-## `jsDocLite`
-
-This is a simple library that uses basic JSDoc style docblocks to comment your code and generate docs. We are actually using it in this repo to automatically generate a README for each library. It doesn't offer full JSDoc support, but the basics are good.
-- [documentation](https://github.com/appsmithorg/foundry/tree/main/libraries/jsDocLite)
-- [commenting guidelines](https://github.com/appsmithorg/foundry/tree/main/libraries/jsDocLite/COMMENTING.md)
-- usage:
-
-    ```sh
-    https://cdn.jsdelivr.net/gh/appsmithorg/foundry@main/dist/jsDocLite.umd.js
-    ```
-
-
------
-
-### FAQ
-1. *Can I remove the libraries in the original repo?*\
-Yes! The `build` command currently expects the jsDocLite library to be available. It uses the JSDelivr version of the library, so you can safely remove it from your clone of this repo.
-2. *Why does this method require a public Github repository?*\
-Firstly, JSDelivr has a native Github integration that makes it easy for us to create a CDN URL without any registration or setup. Secondly, in order to work, both JSDelivr and the app need to be able to access the library over a public connection.
-3. *Why did you create a JSDocLite library instead of using JSDoc?*\
-Partly because JSDoc is a bit overkill for our use case, and partly because we wanted a simple JSDoc parser that can be used client side... such a thing doesn't exist. Mostly - for fun.
 
 ### Dev dependencies
 - npm
