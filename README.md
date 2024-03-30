@@ -46,7 +46,7 @@ npx jest
 3. Para usar o exemplo dentro do appsmith crie um objeto JSObject 
 
 
-```javascript
+```
 export default {
 	async getData () {
 		var data;
@@ -61,6 +61,6 @@ export default {
 		return data;
 	}
 }
-
+```
 
 [MIT](https://choosealicense.com/licenses/mit/)
