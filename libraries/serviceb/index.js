@@ -29,7 +29,7 @@ teste(){
     })
     .catch(error => {
       // Captura qualquer erro ocorrido durante a requisição
-      console.error('Erro:', error.message);
+      throw new Error(error.message);
     });
 	return dados; 
 }
