@@ -15,6 +15,29 @@ Alternatively, you can follow the tutorial to set your own foundry up from scrat
 2. Crie um `index.js` dentro do arquivo, e coloque o seu código no index.js. Atualmente, o nome da biblioteca será o nome do JSObject no appsmith.
 3. Run `npm build` to generate the UMM file and a helpful README for your library. 
 4. Commit and push your changes to a public Github repo.
+---------------------------------------------------
+1. Importe a biblioteca  no appsmith que é gerado na pasta dist.
+2. Rode um servidor local como o nginx para ficar mais fácil o teste dentro do appsmith 
+3. Para usar o exemplo dentro do appsmith crie um objeto JSObject 
+
+```
+export default {
+	async getData () {
+		var data;
+		try {
+			data = serviceb.getAnimais();
+			if(data == null){
+				showAlert("Error")
+			}
+		}catch(error){
+			showAlert(error);
+		}
+		return data;
+	}
+}
+```
+
+
 
 ## Repo management
 Each library should be added to its own folder in the `libraries` directory as a single `index.js` file. This is intended to support simple libraries that are contained in a single file with few or no dependencies. The default expectation is that you can directly cut/paste an Appsmith JSObject into your `index.js`.
@@ -40,27 +63,5 @@ npm run umd.generate
 npx jest
 
 
-### Exemplo 
-1. Importe a biblioteca  no appsmith que é gerado na pasta dist.
-2. Rode um servidor local como o nginx para ficar mais fácil o teste dentro do appsmith 
-3. Para usar o exemplo dentro do appsmith crie um objeto JSObject 
-
-
-```
-export default {
-	async getData () {
-		var data;
-		try {
-			data = serviceb.getAnimais();
-			if(data == null){
-				showAlert("Error")
-			}
-		}catch(error){
-			showAlert(error);
-		}
-		return data;
-	}
-}
-```
 
 [MIT](https://choosealicense.com/licenses/mit/)
