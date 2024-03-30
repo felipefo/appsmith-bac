@@ -1,1 +1,1 @@
-!function(e){"function"==typeof define&&define.amd?define(e):e()}((function(){"use strict";module.exports={toUpperCase:function(e){return e.toUpperCase()}}}));
+!function(e,o){"object"==typeof exports&&"undefined"!=typeof module?module.exports=o():"function"==typeof define&&define.amd?define(o):(e="undefined"!=typeof globalThis?globalThis:e||self).service=o()}(this,(function(){"use strict";return{toUpperCase:e=>e.toUpperCase()}}));
