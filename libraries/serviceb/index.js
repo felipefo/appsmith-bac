@@ -1,17 +1,25 @@
 
 export default {
-// index.js
+
+ sum(a, b) {
+  return a + b;
+},
+
+
 
 teste(){
 	
 },
- async getAnimais(){
+ async  getAnimais(){
 	
 // URL da API que retorna JSON
   const apiUrl = 'http://localhost:2337/api/animals';
+ // showAlert(apiUrl);
  // Função para fazer a requisição usando Fetch API
  // Faz a requisição para a API usando fetch()
- 
+  var data;
+  try{
+	  
   var dados = await fetch(apiUrl)
     .then(response => {
       // Verifica se a resposta da requisição é bem-sucedida (status 200)
@@ -29,8 +37,14 @@ teste(){
     })
     .catch(error => {
       // Captura qualquer erro ocorrido durante a requisição
+	//  showAlert(error.message);
       throw new Error(error.message);
     });
+  }
+  catch(error){
+	  //showAlert(error);
+	  throw new Error(error);
+  }
 	return dados; 
 }
 

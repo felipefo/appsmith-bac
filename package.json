@@ -1,7 +1,10 @@
 {
   "devDependencies": {
+    "@babel/core": "^7.24.3",
+    "@babel/preset-env": "^7.24.3",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
+    "babel-jest": "^29.7.0",
     "rollup": "^2.79.1"
   },
   "scripts": {
