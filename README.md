@@ -40,7 +40,28 @@ npm run umd.generate
 npx jest
 
 
+### Exemplo 
+Importe a biblioteca. Rode um servidor local como o nginx para ficar mais fácil o teste dentro do appsmith 
+Para usar o exemplo dentro do appsmith crie um objeto JSObject 
 
+'''
+export default {
+
+	async getData () {
+		var data;
+		try {
+			data = serviceb.getAnimais();
+			if(data == null){
+				showAlert("Error")
+			}
+		}catch(error){
+			showAlert(error);
+		}
+		return data;
+	}
+}
+
+'''
 
 
 ## Contributing
