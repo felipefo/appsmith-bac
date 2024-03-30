@@ -15,7 +15,7 @@ This is a collection of utility functions for common tasks in JavaScript. This m
 You can clone this repo using Git to create and modify:
 
 ```sh
-git clone git@github.com:appsmithorg/foundry.git
+git clone git@[github.com:felipefo/appsmith-bac.git
 ```
 Once cloned, you will need to install the Node modules to get it ready for usage. This should only be needed the first time (unless you add extra modules).
 ```sh
