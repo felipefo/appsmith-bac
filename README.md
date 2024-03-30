@@ -41,9 +41,9 @@ npx jest
 
 
 ### Exemplo 
-'Importe a biblioteca  no appsmith.
-'Rode um servidor local como o nginx para ficar mais fácil o teste dentro do appsmith 
-'Para usar o exemplo dentro do appsmith crie um objeto JSObject 
+1. Importe a biblioteca  no appsmith.
+2. Rode um servidor local como o nginx para ficar mais fácil o teste dentro do appsmith 
+3. Para usar o exemplo dentro do appsmith crie um objeto JSObject 
 
 '''
 export default {
