@@ -45,9 +45,9 @@ npx jest
 2. Rode um servidor local como o nginx para ficar mais fácil o teste dentro do appsmith 
 3. Para usar o exemplo dentro do appsmith crie um objeto JSObject 
 
+
 '''
 export default {
-
 	async getData () {
 		var data;
 		try {
