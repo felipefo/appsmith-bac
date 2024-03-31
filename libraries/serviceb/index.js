@@ -1,6 +1,3 @@
-// code-runner
-
-
 export default{
 
  sum(a, b) {
@@ -18,6 +15,7 @@ teste(){
  // Função para fazer a requisição usando Fetch API
  // Faz a requisição para a API usando fetch()
   var data;
+ // console.log('Starting...')
   try{
 	  
   var dados = await fetch(apiUrl)
@@ -45,7 +43,7 @@ teste(){
 	  //showAlert(error);
 	  throw new Error(error);
   }
-  console.log(dados);
+  //console.log(dados);
 	return dados; 
 }
 
@@ -53,4 +51,6 @@ teste(){
 // Exporte a função toUpperCase para ser utilizada em outros arquivos
 
 };
+
+
 

@@ -2,6 +2,23 @@
 # Biblioteca para ser utilizada no projeto do BAC
 
 
+### Organização da biblioteca 
+
+## camada de serviço 
+
+Vamos criar uma camada para acesso aos serviços do que dependem de fazer requisições com a api do strapi ou qualquer outra api. 
+
+
+## Camada de persistencia local 
+Vamos criar uma camada para acesso aos localstorage para facilitar o uso 
+
+
+## Camada de interface  
+
+Vamos criar uma camada para poder utilizar elementos de interface no projeto. A camada de interface deve só receber elementos de interface. 
+
+
+
 ## Installation
 
 git clone git@github.com:felipefo/appsmith-bac.git
@@ -37,6 +54,24 @@ export default {
 }
 ```
 
+## Para o processo de desenvolvimento 
+
+Use um arquivo run.js como no exemplo abaixo para o caso do serviceb. Este código referencia a classe index.js da library serviceb. 
+Dessa forma você consegue rodar no visual code e até depurar o código. Veja o exemplo na pasta da library serviceb.
+
+```
+// Importa a função que deseja testar
+import getAnimais from './index.js';
+
+// Chama a função com alguns argumentos e verifica o resultado
+const resultado = getAnimais.getAnimais();
+console.log(resultado); 
+
+```
+
+## Para rodar os Teste
+
+npx jest
 
 
 ## Repo management
@@ -57,10 +92,6 @@ npm run readme.generate
 ```js
 npm run umd.generate
 ```
-
-### Para rodar os Teste
-
-npx jest
 
 
 

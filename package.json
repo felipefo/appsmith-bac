@@ -1,9 +1,14 @@
 {
+  "type": "module",
+
   "devDependencies": {
+    "@babel/cli": "^7.24.1",
     "@babel/core": "^7.24.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.24.1",
     "@babel/preset-env": "^7.24.3",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
+    "babel-cli": "^6.26.0",
     "babel-jest": "^29.7.0",
     "rollup": "^2.79.1"
   },
