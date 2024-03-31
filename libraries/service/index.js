@@ -2,6 +2,7 @@ export default {
   async getAnimais() {
     let dados = fetchapi.fetchapi('http://localhost:2337/api/animals/', "");
     console.log(dados);
+    return dados;
   },
   async createAnimal() {
 
