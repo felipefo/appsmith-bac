@@ -69,6 +69,12 @@ console.log(resultado);
 
 ```
 
+## Build 
+
+npm run build
+
+Olhe na pasta dist.
+
 ## Para rodar os Teste
 
 npx jest
