@@ -18,6 +18,11 @@ Vamos criar uma camada para acesso aos localstorage para facilitar o uso
 Vamos criar uma camada para poder utilizar elementos de interface no projeto. A camada de interface deve só receber elementos de interface. 
 
 
+## Para rodar localmente 
+Adicione a linha no package.json  "type": "module",
+
+Para gerar a dist e inserir no appsmith remove a linha.
+
 
 ## Installation
 
