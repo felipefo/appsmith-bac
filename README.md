@@ -2,18 +2,18 @@
 # Biblioteca para ser utilizada no projeto do BAC
 
 
-### Organização da biblioteca 
+## Organização da biblioteca 
 
-## camada de serviço 
+### camada de serviço 
 
 Vamos criar uma camada para acesso aos serviços do que dependem de fazer requisições com a api do strapi ou qualquer outra api. 
 
 
-## Camada de persistencia local 
+### Camada de persistencia local 
 Vamos criar uma camada para acesso aos localstorage para facilitar o uso 
 
 
-## Camada de interface  
+### Camada de interface  
 
 Vamos criar uma camada para poder utilizar elementos de interface no projeto. A camada de interface deve só receber elementos de interface. 
 
