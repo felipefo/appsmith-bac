@@ -8,6 +8,8 @@
 
 Vamos criar uma camada para acesso aos serviços do que dependem de fazer requisições com a api do strapi ou qualquer outra api. 
 
+Crie um arquivo esperfico na pasta entity para um novo servico. 
+
 
 ### Camada de persistencia local 
 Vamos criar uma camada para acesso aos localstorage para facilitar o uso 
