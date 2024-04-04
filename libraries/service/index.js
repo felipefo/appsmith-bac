@@ -20,14 +20,12 @@ export default {
 
 
   async getCondutor(params) {
-    var api = new Rest("condutor");
-    var data =  await api.get(params);
+    var data  = rest.get("condutor", params);
     return data;
   },
   async createCondutor(params) {
-      var api = new Rest("condutor");
-      var data =  await api.create(params);
-      return data;
+    var data  = rest.create("condutor", params);
+    return data;
     },
 
 
