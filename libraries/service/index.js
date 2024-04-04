@@ -1,26 +1,37 @@
 export default {
-  async getAnimais() {
-    let dados = fetchapi.fetchapi('http://localhost:2337/api/animals/', "");
-    console.log(dados);
-    return dados;
+
+
+
+
+    async getAnimal(params) {
+      var data  = rest.get("animal", params);
+      return data;
+    },
+    async createAnimal(params) {
+        var data  = rest.create("animal", params);
+        return data;
+      },
+  
+  
+
+
+
+
+
+
+  async getCondutor(params) {
+    var api = new Rest("condutor");
+    var data =  await api.get(params);
+    return data;
   },
-  async createAnimal() {
-
-    console.log("TODO"); a
-  },
-
-  async cremoveAnimal() {
-
-    console.log("TODO");
-  },
-
-  async updateAnimal() {
-
-    console.log("TODO");
-  },
-
-};
-
-import fetchapi from './fetch.js';
+  async createCondutor(params) {
+      var api = new Rest("condutor");
+      var data =  await api.create(params);
+      return data;
+    },
 
 
+
+
+}
+ import rest from './util/RestService.js' 

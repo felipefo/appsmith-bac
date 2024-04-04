@@ -1,5 +1,5 @@
 // sum.test.js
-import service from '../index.js';
+import service from '../entity/animals.js';
 
 
 test('getAnimais 1 + 2 to equal 3', () => {

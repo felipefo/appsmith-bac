@@ -11,6 +11,44 @@ const libraryFolders = fs.readdirSync(path.join(baseDir, 'libraries')).filter(fi
   return fs.statSync(path.join(baseDir, 'libraries', file)).isDirectory();
 });
 
+function extractFunctions(content) {
+
+    // Remover imports
+    let code = content.replace(/export\s+default\s*{/, '');
+    code = code.replace(/import\s+.*?;[\r\n]*/g, '');
+    // Remover a declaração 'export default {'
+    code = code.replace(/\/\/.*|\/\*[\s\S]*?\*\//g, '');   
+    // Remover '};'
+    code = code.replace(/};/g, '');; 
+    return code;
+  }
+  
+// Leitura dos arquivos na pasta entity e extraição das funções
+const entityFiles = fs.readdirSync(path.join(baseDir, 'libraries/service/entity')).map(file => {
+  const filePath = path.join(baseDir, 'libraries/service/entity', file);
+  const fileContent = fs.readFileSync(filePath, 'utf8');
+  let code = extractFunctions(fileContent);
+  //console.log(code);
+  return code;
+});
+
+
+// Conteúdo a ser inserido dentro da tag export modulo {}
+const entityContent = entityFiles.join('\n');
+
+
+var  import_index = "import rest from './util/RestService.js'";
+
+
+// Arquivo index.js que será atualizado
+
+const indexFile = path.join(baseDir, 'libraries/service/index.js');
+
+// Atualização do conteúdo do arquivo index.js
+fs.writeFileSync(indexFile, `export default {\n${entityContent}\n}\n ${import_index} ` );
+
+
+
 const outputConfig = libraryFolders.map(folder => {
   return {
     input: path.join(baseDir, `libraries/${folder}/index.js`),

@@ -4,6 +4,8 @@ module.exports = {
   plugins: [
     ["@babel/plugin-transform-modules-commonjs", {
       "allowTopLevelThis": true
-    }]
+    },
+    ["transform-export-default"],
+  ]
   ]
 };
