@@ -1,43 +1,9 @@
+
+
+
 export default {
 
-
-
-
-    async getAnimal(params) {
-      var data  = rest.get("animal", params);
-      return data;
-    },
-    async createAnimal(params) {
-        var data  = rest.create("animal", params);
-        return data;
-      },
-  
-  
-
-
-
-
-
-
-  async getCondutor(params) {
-    var data  = rest.get("condutor", params);
-    return data;
-  },
-  async createCondutor(params) {
-    var data  = rest.create("condutor", params);
-    return data;
-    },
-
-
-
-
-
-
-
-
-
   async getUrl() {
-
     var URL_PM = 'http:\/\/localhost:2337';
     var URL_LEDS = 'http:\/\/localhost:2337';
     if(this.getServidor() == "LEDS")
@@ -88,7 +54,4 @@ setServidorPM(){
     localStorage.setItem("SERVIDOR", "PM");
 }
 
-
-
-}
- import rest from './util/RestService.js' 
+};
