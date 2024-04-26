@@ -13,6 +13,11 @@ export default {
         var data  = rest.create("animal", params);
         return data;
       },
+
+      async removeAnimal(params) {
+        var data  = rest.remove("animal", params);
+        return data;
+      },
   };
   
 

@@ -11,6 +11,11 @@ export default {
         var data  = rest.create("animal", params);
         return data;
       },
+
+      async removeAnimal(params) {
+        var data  = rest.remove("animal", params);
+        return data;
+      },
   
   
 
@@ -34,10 +39,53 @@ export default {
 
 
 
+    extrairMensagensDeErro(obj, path = '') {
+        let messages = [];
+        for (const key in obj) {
+            if (key === 'path' && obj[key] && obj['message']) {
+                messages.push(`${obj['message']}`);
+            }
+            else if (typeof obj[key] === 'object' && obj[key] !== null) {
+                const nextPath = path.length ? `${path}.${key}` : key;
+                messages = messages.concat(this.extrairMensagensDeErro(obj[key], nextPath));
+            }
+        }
+
+        return messages;
+    },
+    juntarMensagensDeErro(messages) {
+        let mensagemConcatenada = '';
+        for (let i = 0; i < messages.length; i++) {
+            mensagemConcatenada += messages[i];
+            if (i !== messages.length - 1) { 
+                mensagemConcatenada += '\n';
+            }
+        }
+        return mensagemConcatenada;
+    },
+    getErrorApi(apiError) {
+        let messages = this.extrairMensagensDeErro(apiError);
+        console.log(JSON.stringify(messages));
+        messages = this.juntarMensagensDeErro(messages);
+        return messages;
+    },
+
+    
+    setUIError(apiError) {
+        errorWidget.setText("");
+        let message = this.getErrorApi(apiError);
+        errorWidget.setText(message);
+    },
 
 
-  async getUrl() {
 
+
+
+
+
+
+
+    async getUrl(){
     var URL_PM = 'http:\/\/localhost:2337';
     var URL_LEDS = 'http:\/\/localhost:2337';
     if(this.getServidor() == "LEDS")

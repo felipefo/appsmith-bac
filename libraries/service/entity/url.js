@@ -1,9 +1,13 @@
 
+/*
+Funcoes para pegar as informacoes de qual servidor esta send utilizado atualmente.
+@author: Felipe Frechiani de Oliveira
+*/
 
 
 export default {
 
-  async getUrl() {
+    async getUrl(){
     var URL_PM = 'http:\/\/localhost:2337';
     var URL_LEDS = 'http:\/\/localhost:2337';
     if(this.getServidor() == "LEDS")
